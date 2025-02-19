@@ -18,6 +18,7 @@
 #include "app/dtmf.h"
 #include "bitmaps.h"
 #include "driver/st7565.h"
+#include "driver/bk4819.h"
 #include "external/printf/printf.h"
 #include "functions.h"
 #include "misc.h"
@@ -251,6 +252,11 @@ void UI_DisplayMain(void)
 						NUMBER_ToDigits(gEeprom.VfoInfo[i].pRX->Frequency, String);
 					}
 					UI_DisplayFrequency(String, 31, i * 4, false, false);
+
+					char* s = "";
+					sprintf(s, "%d", BK4819_GetRSSI());
+					UI_DisplaySmallDigits(10, s, 32, 32);
+
 					if (IS_MR_CHANNEL(gEeprom.ScreenChannel[i])) {
 						const uint8_t Attributes = gMR_ChannelAttributes[gEeprom.ScreenChannel[i]];
 						if (Attributes & MR_CH_SCANLIST1) {
