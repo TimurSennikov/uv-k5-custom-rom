@@ -294,6 +294,8 @@ void UI_DisplayMain(void)
 			}
 		}
 
+		UI_DisplaySmallDigits(1, "2025", 32, 4);
+
 		// TODO: not quite how the original does it, but it's quite entangled in Ghidra.
 		if (Level) {
 			memcpy(pLine1 + 128 + 0, BITMAP_Antenna, sizeof(BITMAP_Antenna));

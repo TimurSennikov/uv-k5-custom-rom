@@ -35,7 +35,6 @@ void UI_DisplayStatus(void)
 		memcpy(gStatusLine, BITMAP_PowerSave, sizeof(BITMAP_PowerSave));
 	}
 
-	/*
 	if (gBatteryDisplayLevel < 2) {
 		if (gLowBatteryBlink == 1) {
 			memcpy(gStatusLine + 110, BITMAP_BatteryLevel1, sizeof(BITMAP_BatteryLevel1));
@@ -51,9 +50,6 @@ void UI_DisplayStatus(void)
 			memcpy(gStatusLine + 110, BITMAP_BatteryLevel5, sizeof(BITMAP_BatteryLevel5));
 		}
 	}
-	*/
-
-	UI_DisplaySmallDigits(2, "123", 110, 4);
 
 	if (gChargingWithTypeC) {
 		memcpy(gStatusLine + 100, BITMAP_USB_C, sizeof(BITMAP_USB_C));
@@ -90,6 +86,4 @@ void UI_DisplayStatus(void)
 	}
 #endif
 	ST7565_BlitStatusLine();
-	ST7565_BlitFullScreen();
 }
-
