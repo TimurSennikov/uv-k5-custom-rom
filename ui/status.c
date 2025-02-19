@@ -53,7 +53,7 @@ void UI_DisplayStatus(void)
 	}
 	*/
 
-	UI_DisplaySmallDigits(10, "123", 110, 5);
+	UI_DisplaySmallDigits(2, "123", 110, 1);
 
 	if (gChargingWithTypeC) {
 		memcpy(gStatusLine + 100, BITMAP_USB_C, sizeof(BITMAP_USB_C));
