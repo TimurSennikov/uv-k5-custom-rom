@@ -157,6 +157,8 @@ void UI_DisplayMain(void)
 			LevelMode = LEVEL_MODE_RSSI;
 			if ((gCurrentFunction == FUNCTION_RECEIVE || gCurrentFunction == FUNCTION_MONITOR) && gEeprom.RX_VFO == i) {
 				memcpy(pLine0 + 14, BITMAP_RX, sizeof(BITMAP_RX));
+
+				UI_DisplaySmallDigits(12, "1", 32, 32);
 			}
 		}
 
@@ -252,10 +254,6 @@ void UI_DisplayMain(void)
 						NUMBER_ToDigits(gEeprom.VfoInfo[i].pRX->Frequency, String);
 					}
 					UI_DisplayFrequency(String, 31, i * 4, false, false);
-
-					char* s = "";
-					sprintf(s, "%d", BK4819_GetRSSI());
-					UI_DisplaySmallDigits(10, s, 32, 32);
 
 					if (IS_MR_CHANNEL(gEeprom.ScreenChannel[i])) {
 						const uint8_t Attributes = gMR_ChannelAttributes[gEeprom.ScreenChannel[i]];
