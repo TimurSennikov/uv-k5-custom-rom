@@ -38,8 +38,8 @@ void UI_DisplayWelcome(void)
 		memset(WelcomeString0, 0, sizeof(WelcomeString0));
 		memset(WelcomeString1, 0, sizeof(WelcomeString1));
 		if (gEeprom.POWER_ON_DISPLAY_MODE == POWER_ON_DISPLAY_MODE_VOLTAGE) {
-			sprintf(WelcomeString0, "U");
-			sprintf(WelcomeString1, "%.2fV", gBatteryVoltageAverage * 0.01);
+			sprintf(WelcomeString0, "");
+			sprintf(WelcomeString1, "ROMA GEY", gBatteryVoltageAverage * 0.01);
 		} else {
 			EEPROM_ReadBuffer(0x0EB0, WelcomeString0, 16);
 			EEPROM_ReadBuffer(0x0EC0, WelcomeString1, 16);

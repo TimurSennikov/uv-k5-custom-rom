@@ -76,9 +76,9 @@ void UI_DisplayMain(void)
 				if (!gDTMF_InputMode) {
 					if (gDTMF_CallState == DTMF_CALL_STATE_CALL_OUT) {
 						if (gDTMF_State == DTMF_STATE_CALL_OUT_RSP) {
-							strcpy(String, "CALL OUT(RSP)");
+							strcpy(String, "RSP");
 						} else {
-							strcpy(String, "CALL OUT");
+							strcpy(String, "OUT");
 						}
 					} else if (gDTMF_CallState == DTMF_CALL_STATE_RECEIVED) {
 						if (DTMF_FindContact(gDTMF_Caller, Contact)) {
