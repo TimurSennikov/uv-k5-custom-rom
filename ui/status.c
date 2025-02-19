@@ -53,7 +53,7 @@ void UI_DisplayStatus(void)
 	}
 	*/
 
-	UI_DisplaySmallDigits(2, "123", 110, 1);
+	UI_DisplaySmallDigits(2, "123", 110, 4);
 
 	if (gChargingWithTypeC) {
 		memcpy(gStatusLine + 100, BITMAP_USB_C, sizeof(BITMAP_USB_C));
@@ -90,5 +90,6 @@ void UI_DisplayStatus(void)
 	}
 #endif
 	ST7565_BlitStatusLine();
+	ST7565_BlitFullScreen();
 }
 
