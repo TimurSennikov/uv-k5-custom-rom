@@ -26,6 +26,7 @@
 #include "misc.h"
 #include "settings.h"
 #include "ui/status.h"
+#include "ui/helper.h"
 
 void UI_DisplayStatus(void)
 {
@@ -33,6 +34,8 @@ void UI_DisplayStatus(void)
 	if (gCurrentFunction == FUNCTION_POWER_SAVE) {
 		memcpy(gStatusLine, BITMAP_PowerSave, sizeof(BITMAP_PowerSave));
 	}
+
+	/*
 	if (gBatteryDisplayLevel < 2) {
 		if (gLowBatteryBlink == 1) {
 			memcpy(gStatusLine + 110, BITMAP_BatteryLevel1, sizeof(BITMAP_BatteryLevel1));
@@ -48,6 +51,10 @@ void UI_DisplayStatus(void)
 			memcpy(gStatusLine + 110, BITMAP_BatteryLevel5, sizeof(BITMAP_BatteryLevel5));
 		}
 	}
+	*/
+
+	UI_DisplaySmallDigits(10, "123", 110, 5);
+
 	if (gChargingWithTypeC) {
 		memcpy(gStatusLine + 100, BITMAP_USB_C, sizeof(BITMAP_USB_C));
 	}

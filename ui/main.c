@@ -157,8 +157,6 @@ void UI_DisplayMain(void)
 			LevelMode = LEVEL_MODE_RSSI;
 			if ((gCurrentFunction == FUNCTION_RECEIVE || gCurrentFunction == FUNCTION_MONITOR) && gEeprom.RX_VFO == i) {
 				memcpy(pLine0 + 14, BITMAP_RX, sizeof(BITMAP_RX));
-
-				UI_DisplaySmallDigits(12, "1", 32, 32);
 			}
 		}
 
