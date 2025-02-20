@@ -315,10 +315,7 @@ void UI_DisplayMain(void)
 			}
 		}
 
-		char s[8];
-		NUMBER_ToDigits(1, s);
-
-		UI_DisplaySmallDigits(2, s, 32, Line + 1);
+		UI_DisplaySmallDigits(2, "1", 18, Line + 2);
 
 		// 0x931E
 		if (gEeprom.VfoInfo[i].IsAM) {
