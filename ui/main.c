@@ -277,7 +277,7 @@ void UI_DisplayMain(void)
 			}
 		}
 
-		UI_PrintString("TIMUR", 31, 63, 2, 2, true);
+		UI_PrintString("TIMUR", 31, 63, 2, 3, true);
 
 		// 0x926E
 		uint8_t Level = 0;
