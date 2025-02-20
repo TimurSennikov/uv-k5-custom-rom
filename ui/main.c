@@ -316,7 +316,7 @@ void UI_DisplayMain(void)
 		}
 
 		char s[8];
-		NUMBER_ToDigits(69420, s);
+		NUMBER_ToDigits(1, s);
 
 		UI_DisplaySmallDigits(2, s, 32, Line + 1);
 
