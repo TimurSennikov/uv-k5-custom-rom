@@ -277,7 +277,9 @@ void UI_DisplayMain(void)
 			}
 		}
 
-		UI_PrintString("TIMUR", 64, 128, 2, 3, true);
+		char s[4];
+		NUMBER_ToDigits(10, s);
+		UI_PrintString(s, 100, 128, 2, 3, true);
 
 		// 0x926E
 		uint8_t Level = 0;
