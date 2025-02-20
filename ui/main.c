@@ -277,7 +277,9 @@ void UI_DisplayMain(void)
 			}
 		}
 
-		UI_PrintString("test", 100, 128, 2, 3, false);
+		char s[12];
+		sprintf(s, "%d dBm", BK4819_GetRSSI_dBm());
+		UI_PrintString(s, 64, 100, 4, 3, false);
 
 		// 0x926E
 		uint8_t Level = 0;
