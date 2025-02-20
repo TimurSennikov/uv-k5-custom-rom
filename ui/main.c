@@ -318,7 +318,7 @@ void UI_DisplayMain(void)
 		char s[8];
 		NUMBER_ToDigits(69420, s);
 
-		UI_DisplaySmallDigits(2, s, 32, 3);
+		UI_DisplaySmallDigits(2, s, 32, Line + 1);
 
 		// 0x931E
 		if (gEeprom.VfoInfo[i].IsAM) {
