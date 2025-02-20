@@ -743,6 +743,10 @@ uint16_t BK4819_GetRSSI(void)
 	return BK4819_ReadRegister(BK4819_REG_67) & 0x01FF;
 }
 
+uint16_t BK4819_GetRSSI_dBm(void){
+	return (BK4819_GetRSSI() / 2) - 160;
+}
+
 bool BK4819_GetFrequencyScanResult(uint32_t *pFrequency)
 {
 	uint16_t High, Low;

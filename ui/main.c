@@ -318,9 +318,9 @@ void UI_DisplayMain(void)
 		}
 
 		char s[8];
-		NUMBER_ToDigits(BK4819_GetRSSI(), s);
+		NUMBER_ToDigits(BK4819_GetRSSI_dBm(), s);
 
-		UI_DisplaySmallDigits(2, s, 32, 4);
+		UI_DisplaySmallDigits(2, s, 32, 3);
 
 		// 0x931E
 		if (gEeprom.VfoInfo[i].IsAM) {
