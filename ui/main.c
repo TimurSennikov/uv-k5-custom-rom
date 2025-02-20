@@ -317,6 +317,11 @@ void UI_DisplayMain(void)
 			}
 		}
 
+		char s[8];
+		NUMBER_ToDigits(BK4819_GetRSSI(), s);
+
+		UI_DisplaySmallDigits(2, s, 32, 4);
+
 		// 0x931E
 		if (gEeprom.VfoInfo[i].IsAM) {
 			memcpy(pLine1 + 128 + 27, BITMAP_AM, sizeof(BITMAP_AM));
