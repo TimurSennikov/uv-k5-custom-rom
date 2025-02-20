@@ -279,7 +279,7 @@ void UI_DisplayMain(void)
 
 		char s[4];
 		NUMBER_ToDigits(10, s);
-		UI_PrintString(s, 100, 128, 2, 3, true);
+		UI_PrintString(s, 100, 128, 2, 3, false);
 
 		// 0x926E
 		uint8_t Level = 0;
